@@ -1,0 +1,21 @@
+linters:
+  disable-all: true
+  enable:
+    - govet
+    - staticcheck
+    - gofmt
+    - errcheck
+    - unused
+
+linters-settings:
+  errcheck:
+    exclude-functions:
+      - fmt.Println
+      - fmt.Printf
+      - fmt.Print
+      - fmt.Fprintln
+      - fmt.Fprintf
+
+issues:
+  max-issues-per-linter: 10
+  max-same-issues: 3
